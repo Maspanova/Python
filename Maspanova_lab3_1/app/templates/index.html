@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Healthy Lifestyle</title>
+	<link rel="shortcut icon" href="Images/logo_ico.svg">
+	<meta name="description" content="">
+	<meta name="keywords" content="fitnes-tour, joga, tour, fitness">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	<meta name="viewport" content="width=device-width initial-scale=1,0">
+	</head>
+<body>
+	
+	<header>
+		<div class="wrapper">
+			
+			<div class="menu-burger">
+				<span></span> 
+			</div>
+			<nav>
+				<ul class="menu cleafix">
+					<li class="menu_parent"><a href="index.html">Главная</a>
+					<li class="menu_parent"><a href="pages/experience.html">Каталог</a>
+						<ul class="menu_children">
+							<li><a>Туры</a></li>	
+							<li><a>Семинары</a></li>
+							<li><a>Товары для фитнеса</a></li>
+						</ul>
+					</li>
+					<li class="menu_parent"><a href="pages/education.html">Консультанты</a>
+						<ul class="menu_children">
+							<li><a>Фитнес</a></li>	
+							<li><a>Правильное питание</a></li>
+							<li><a>Естественное омоложение</a></li>
+							<li><a>Стать консультантом</a></li>
+						</ul>
+					</li>
+					<li class="menu_parent"><a href="pages/projects.html">Полезные советы</a>
+						<ul class="menu_children">
+							<li><a>Фитнес</a></li>	
+							<li><a>Правильное питание</a></li>
+							<li><a>Естественное омоложение</a></li>
+						</ul>
+					</li>
+					<li class="menu_parent"><a href="#contact">Видео и аудио</a>
+						<ul class="menu_children">
+							<li><a>Видео тренировки</a></li>	
+							<li><a>Музыка для релакса</a></li>
+							<li><a>Фотоотчеты</a></li>
+						</ul>
+					</li>
+					<li class="menu_parent"><a href="#contact">О нас</a></li>
+					<li class="menu_parent"><a href="#contact">Поиск</a></li>
+					<li class="menu_parent"><a href="#contact">Регистрация</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<p>{{ time }}</p>
+		{% if user_name or user_surname %}
+		<h1>Привет:{{user_surname}} {{user_name}}</h1>
+		{% else %}
+		<h>Пожалуйста, введите фамилию и имя, достаточно заполнить одно поле</h>
+		{% endif %}
+		<form  method="post">
+			<p><input type="text" name="user_surname" placeholder="Фамилия"></p>
+			<p><input type="text" name="user_name" placeholder="Имя"></p>
+			<p><input type="submit"></p>
+		</form>
+		
+	</main>
+	<footer id="contact">		
+	</footer>
+	
+</body>
+</html>
