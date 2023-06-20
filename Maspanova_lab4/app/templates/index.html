@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user_name and user_surname %}
+<h1>hello:{{user_name}} {{user_surname}}</h1>
+<p></p>
+{% else %}
+<h>Пожалуйста, введите имя и фамилию, заполнить нужно оба поля</h>
+{% endif %}
+    <form method="post">
+    {{ form.csrf_token }}
+    {{ form.userNameField }}
+    {{form.userSurnameField}}
+    <input type="submit" name="">
+    </form>
+{% endblock %}
+		
+	
