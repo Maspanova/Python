@@ -1,0 +1,104 @@
+*{margin:0;padding:0;}
+
+body {
+    background-image: url(../Images/background2.jpg); /*рисунок фона*/
+    background-attachment:fixed; /*фиксация фона*/
+    background-size: cover; /*фон на всю страницу*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family:'Arial';
+    line-height: 14px;
+    width: 100%;
+ 
+   } 
+   header {height:100%;
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+  .wrapper {margin:auto;
+    position: relative;
+    clear:both;
+    min-width:980px;
+    } 
+
+    
+.menu, .menu_children {list-style:none;/*без маркировки*/
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    align-items: center;
+    background: #dceee0;
+    opacity: 0.5;
+    margin: 10px;
+    padding: 10px;
+
+} 
+.menu_parent{
+    position: relative;
+      flex-wrap: wrap;
+justify-content: space-between; 
+}
+.menu_children{
+    position: absolute;
+    left: 5px;
+    top: -15px;
+    display: block;
+    visibility: hidden; /*скрыть */
+    line-height: 20px;
+    min-width: 150px;
+  
+}
+nav ul li {float:left;margin:auto; font-size:20px; font-family:'Georgia'; font-style:italic; justify-content: space-between;}
+nav ul li a {color:#000000; text-decoration:none;}
+nav ul li a:hover {
+       transition: transform .2s;
+       color: rgb(56, 155, 16);
+    }
+
+    nav ul li:hover .menu_children{
+    visibility: visible;
+    transition: transform .2s;
+    transform: scale(1.1); /* Увеличиваем масштаб */
+    opacity: 0.9;
+    padding: 0px;
+ 
+    }
+   
+*main{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 900px;
+    background: #FFFFFF;
+    align-self: center; /*размещение по центру экрана */
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {clear:both; 
+    width: 90%;
+    height:60px;
+    margin:auto;
+    position: absolute;
+    bottom: 20px;
+    align-self: center;
+
+   }
+.footer {    display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between; 
+        align-items: center;
+
+    }
+footer a {color:#000000;text-decoration:underline;}
+footer p {color:#000000; 
+    display: inline-block; 
+    margin:0px 20px 0px 20px; /*разместить в один ряд*/
+    position: relative;
+    flex-wrap: wrap;
+justify-content: space-between}; 
+footer img {margin:10px 20px 0px 0px;} 
