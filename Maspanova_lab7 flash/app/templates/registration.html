@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Пожалуйста, введите данные для регистрации </h2>
+<br>
+<form method="POST">
+       {{form.csrf_token}}
+    <p>
+    Login: {{form.loginField(size=20, placeholder="введите логин тут")}}
+    <br>
+    Password: {{form.passwordField (size=20, placeholder="введите пароль", type="Password")}}
+    <br>
+    {{form.passwordFieldCheck (size=20, placeholder="Повторите пароль", type="Password")}}
+    <br>
+    <br>
+    <button type="submit">Регистрация</button>
+</p>
+</form>
+{% endblock %}
+		
+	

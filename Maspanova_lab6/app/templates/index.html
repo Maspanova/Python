@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+Привет пользователь {{current_user.id}}
+{%  for role in roles%}
+{{role.id}}
+{{role.title}}
+<form action="{{url_for('delete_role', delete_id = role.id)}}" method="POST">
+  <button >Delete</button>
+</form>
+
+{% endfor %} 
+    <form method="post">
+  <br>
+    {{ form.csrf_token }}
+    {{ form.userNameField }}
+    <input type="submit" name="">
+    <br>
+    </form>
+        <br>
+  
+{% endblock %}
+		
+	
